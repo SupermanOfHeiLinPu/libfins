@@ -98,7 +98,7 @@ typedef int					SOCKET;
 									/*							*/
 #define FINS_MODE_UNKNOWN			0			/* PLC communication mode unknown			*/
 #define FINS_MODE_CV				1			/* PLC communicates like a CV PLC			*/
-#define FINS_MODE_CS				2			/* PLC communicates like a CS/CJ PLC			*/
+#define FINS_MODE_CS				2			/* PLC communicates like a CS/CJ/CP PLC			*/
 									/*							*/
 									/********************************************************/
 
