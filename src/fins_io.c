@@ -55,8 +55,8 @@
 
 #define MAX_MSG		(FINS_HEADER_LEN+FINS_BODY_LEN-2)		/* Maximum UDP message size */
 #define BUFLEN		1024
-#define SEND_TIMEOUT	10
-#define RECV_TIMEOUT	10
+#define SEND_TIMEOUT	3
+#define RECV_TIMEOUT	3
 
 #if defined(_WIN32)
 typedef const char	send_tp;
@@ -533,8 +533,7 @@ static int fins_tcp_recv( struct fins_sys_tp *sys, unsigned char *buf, int len )
 
 			if ( errno == EAGAIN ) {
 
-				finslib_milli_second_sleep( 10 );
-				continue;
+				return total_len;
 			}
 		}
 
